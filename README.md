@@ -1,12 +1,12 @@
-IMPLEMENTATION OF ADDRESS RESOLUTION PROTOCOL(ARP)
-EXP: 4
-DATE:29-03-2023
+# IMPLEMENTATION OF ADDRESS RESOLUTION PROTOCOL(ARP)
+# EXP: 4
+# DATE:29-03-2023
 
-AIM:
+# AIM:
 To write a python program for implementing Address Resolution Protocol(ARP).
 
-ALGORITHM:
-Client:
+# ALGORITHM:
+# Client:
 1.Start the program
 
 2.Using socket connection is established between client and server.
@@ -17,7 +17,7 @@ Client:
 
 5.Server returns the MAC address to client.
 
-Server:
+# Server:
 1.Start the program
 
 2.Accept the socket which is created by the client.
@@ -28,8 +28,8 @@ Server:
 
 5.Map the IP address with its MAC address and return the MAC address to client.
 
-PROGRAM:
-CLIENT:
+# PROGRAM:
+# CLIENT:
 ```import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -43,7 +43,7 @@ try:
 except KeyError:
   c.send("Not Found".encode())
 ```
-SERVER:
+# SERVER:
 ```import socket
 s=socket.socket()
 s.connect(('localhost',8000))
@@ -52,11 +52,11 @@ while True:
    s.send(ip.encode())
    print("MAC Address",s.recv(1024).decode())
 ```
-CLIENT OUTPUT :
+# CLIENT OUTPUT :
 ![image](https://github.com/SanjithaBolisetti/EX-4/assets/119393633/7b434cfe-88ed-42ae-9083-9e3a2fa32e09)
 
-SERVER OUTPUT :
+# SERVER OUTPUT :
 ![image](https://github.com/SanjithaBolisetti/EX-4/assets/119393633/7c8e4382-783f-4e99-bb7e-66125fd6da17)
 
-RESULT:
+# RESULT:
 Thus, the python program for simulating ARP protocols using TCP was successfully executed.
